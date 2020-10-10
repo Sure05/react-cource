@@ -1,0 +1,5 @@
+.CommentsComponent {
+    padding-top: 5px;
+    max-height: 300px;
+    overflow: auto;
+}

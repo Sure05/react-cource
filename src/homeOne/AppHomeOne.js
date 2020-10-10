@@ -4,7 +4,7 @@ import TableProducts from './components/TableProducts'
 import ProductForm from './components/ProductForm'
 
 
-class App extends React.Component{
+class AppHomeOne extends React.Component{
 	state = {
 		categoriesList: [
 			{
@@ -143,4 +143,4 @@ class App extends React.Component{
 
 }
 
-export default App;
+export default AppHomeOne;
