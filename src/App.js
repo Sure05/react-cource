@@ -6,11 +6,13 @@ import 'semantic-ui-css/semantic.min.css'
 // import AppHomeOne from "./homeOne/AppHomeOne";
 // import SliderContainer from "./work2/SliderContainer";
 import Blog from "./work3/Blog";
+import Hooks from "./work4/Hooks";
 
 
 function App() {
   return (
-      <Blog />
+      <Hooks />
+      // <Blog />
       // <SliderContainer />
       // <AppHomeOne />
   );

@@ -15,7 +15,6 @@ class Blog extends Component {
 
   render() {
     const { selectedAuthorInfo } = this.state;
-    console.log(selectedAuthorInfo);
     return (
       <Grid className='blog'>
           <Grid.Column width={10}>
