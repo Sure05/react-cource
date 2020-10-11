@@ -1,31 +1,29 @@
 import React, {Fragment, Component} from 'react';
-import SwiperComponent from "./SwiperComponent";
-import { Checkbox } from 'semantic-ui-react'
+import SplideComponent from "./SplideComponent";
+import {Checkbox, Input, Select} from 'semantic-ui-react'
 
 class SliderContainer extends Component {
 	state = {
-		control: true,
-		loop: true,
-		direction: 'horizontal',
-		navigation: {
-			nextEl: '.swiper-button-next',
-			prevEl: '.swiper-button-prev',
-		},
-		autoplay: {
-			delay: 1000,
-		},
-		autoPlayStatus: false
+		type: 'slide',
+		autoplay: true,
+		interval: 2000,
+		width: '50%',
+		perPage: 1
 	}
 	setControl = value => {
 
 	}
 	render() {
+		const countryOptions = [
+			{value: 'slide', text: 'slide' },
+			{value: 'loop', text: 'loop' },
+		]
 		return (
 			<Fragment>
-				<Checkbox checked={this.state.loop} label={"Loop"} onClick={(e, {checked}) => this.setState({loop: checked})} />
-				<Checkbox checked={this.state.control} label={"Control"} onClick={(e, {checked}) => this.setState({control: checked})} />
-				<Checkbox checked={this.state.autoPlayStatus} label={"Autoplay"} onClick={(e, {checked}) => this.setState({autoPlayStatus: checked})} />
-				<SwiperComponent options={this.state}/>
+				<Input value={this.state.perPage} type="number" placeholder='Search...' onChange={(e, {value}) => this.setState({perPage: value})} />
+				<Checkbox checked={this.state.autoplay} label={"Autoplay"} onClick={(e, {checked}) => this.setState({autoplay: checked})} />
+				<Select value={this.state.type} placeholder='Select your country' onChange={(e, {value}) => this.setState({type: value})} options={countryOptions} />
+				<SplideComponent options={this.state}/>
 			</Fragment>
 		);
 	}
