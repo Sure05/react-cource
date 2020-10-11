@@ -3,9 +3,9 @@ import React from 'react';
 import './App.css';
 import 'semantic-ui-css/semantic.min.css'
 
-// import AppHomeOne from "./homeOne/AppHomeOne";
+// import AppHomeOne from "./work1/AppHomeOne";
 // import SliderContainer from "./work2/SliderContainer";
-import Blog from "./work3/Blog";
+// import Blog from "./work3/Blog";
 import Hooks from "./work4/Hooks";
 
 
