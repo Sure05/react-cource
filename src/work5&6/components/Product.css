@@ -1,0 +1,7 @@
+.ui.cards > .card {
+    width: calc(25% - 1em);
+}
+.ui.cards > .card .image img {
+    height: 250px;
+    object-fit: cover;
+}
