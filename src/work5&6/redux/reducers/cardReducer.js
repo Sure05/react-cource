@@ -1,7 +1,12 @@
 import {createReducer} from "@reduxjs/toolkit";
 import {addProductToCart, removeProductFormCart} from "../actions/card";
 
-const initialState = [];
+let initialState = [];
+
+if(localStorage.hasOwnProperty('product')){
+	initialState = JSON.parse(localStorage.getItem('product'))
+}
+
 export const cardReducer = createReducer(initialState, {
 	[addProductToCart.type]: (state, action) => {
 		const productIndex = state.findIndex(product => product.id === action.payload);
