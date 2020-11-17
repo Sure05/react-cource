@@ -7,12 +7,16 @@ import 'semantic-ui-css/semantic.min.css'
 // import SliderContainer from "./work2/SliderContainer";
 // import Blog from "./work3/Blog";
 // import Hooks from "./work4/Hooks";
-import BlogAndCart from "./work5&6/BlogAndCart";
+// import BlogAndCart from "./work6/BlogAndCart";
+// import Blog from "./work5/blog-v2/Blog";
+import GistsApp from "./work7/GistsApp";
 
 
 function App() {
   return (
-      <BlogAndCart />
+      <GistsApp />
+      // <Blog />
+      // <BlogAndCart />
       // <Hooks />
       // <Blog />
       // <SliderContainer />

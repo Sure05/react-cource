@@ -27,28 +27,15 @@ class SplideComponent extends Component {
 	}
 
 	render() {
+		const { children } = this.props;
+
 		return (
 			<div ref={this.slider} className="splide">
 				<div className="splide__track">
 					<ul className="splide__list">
-						<li className="splide__slide">
-							<img className="full-with-img"
-								 src="https://i.morioh.com/200613/cbd162d1.jpg"
-								 alt=""
-							/>
-						</li>
-						<li className="splide__slide">
-							<img className="full-with-img"
-								 src="https://www.valuecoders.com/blog/wp-content/uploads/2016/08/top-20-angularjs-developer-tools.jpg"
-								 alt=""
-							/>
-						</li>
-						<li className="splide__slide">
-							<img className="full-with-img"
-								 src="https://i1.wp.com/storage.googleapis.com/blog-images-backup/1*wFL3csJ96lQpY0IVT9SE3w.jpeg?ssl=1"
-								 alt=""
-							/>
-						</li>
+						{
+							children.map(img => <li className="splide__slide">{img}</li>)
+						}
 					</ul>
 				</div>
 			</div>
